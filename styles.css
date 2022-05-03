@@ -114,6 +114,11 @@ p {
   background-clip: padding-box, border-box;
 }
 
+#table {
+  display: flex;
+  flex-direction: row;
+}
+
 .cell {
   border: rgb(61, 0, 217) solid;
   width: 150px;
