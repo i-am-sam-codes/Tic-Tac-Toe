@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* violet */
+  --primary-color: 111, 76, 255;
+
+  /* white */
+  --text-color: 256, 256, 256;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  font-weight: bold;
+  color: var(--text-color);
+  text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+  height: 100px;
+  width: 100%;
+}
+
+.title {
+  margin-left: 35px;
+  font-size: 35px;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading,
+p {
+  display: flex;
+  flex-direction: column;
+  font-size: 60px;
+  color: rgb(var(--text-color));
+  font-family: sans-serif;
+  font-weight: bold;
+  text-shadow: 0 0 80px rgb(192 219 255 / 75%), 0 0 32px rgb(65 120 255 / 24%);
+}
+
+#heading-2 {
+  background: linear-gradient(to right, #30cfd0, #c43ad6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 30px;
+  margin-left: 45px;
+}
+
+.btn-1 {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 32px;
+  width: 150px;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+  transition: all 0.3s ease;
+}
+
+.btn-1:hover {
+  transition: all 0.3s ease;
+}
+
+.btn-2 {
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 12px 32px;
+  width: 150px;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  border-radius: 50px;
+  box-shadow: rgba(var(--primary-color), 0.5) 0px 0px 20px 0px;
+  transition: all 0.3s ease;
+  background-color: rgb(var(--primary-color));
+  border: 1px solid rgb(var(--primary-color));
+  color: rgb(var(--text-color));
+}
+
+.btn-2:hover {
+  transition: all 0.3s ease;
+}
+
+.game-board {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(var(--text-color));
+  border: 2px double transparent;
+  background-image: linear-gradient(rgb(13, 14, 33), rgb(13, 14, 33)),
+    radial-gradient(circle at left top, rgb(1, 110, 218), rgb(217, 0, 192));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+.cell {
+  border: rgb(61, 0, 217) solid;
+  width: 150px;
+  height: 150px;
+}
