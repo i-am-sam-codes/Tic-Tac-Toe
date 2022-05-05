@@ -16,26 +16,50 @@
         <p>Tic-Tac-Toe 💀</p>
         <p id="heading-2">Want to play a game?</p>
         <div class="btn-container">
-          <button class="btn-1">PLAY</button>
+          <!-- Trigger/Open The Modal -->
+          <button class="btn-1" id="myBtn">PLAY</button>
+          <!-- <button class="btn-1">PLAY</button> -->
           <button class="btn-2">PLAY AI</button>
+
+          <!-- The Modal -->
+          <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <span class="close">&times;</span>
+            <div class="modal-content">
+              <div class="selection-container1">
+                <p id="player-1">PLAYER 1</p>
+                <div class="btn-container1">
+                  <button type="button" class="selector">X</button>
+                  <button type="button" class="selector">O</button>
+                </div>
+              </div>
+              <div class="selection-container2">
+                <p id="player-2">PLAYER 2</p>
+                <div class="btn-container2">
+                  <button type="button" class="selector">X</button>
+                  <button type="button" class="selector">O</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="game-board">
         <div id="table">
           <div>
-            <div data-num class="cell"></div>
-            <div data-num class="cell"></div>
-            <div data-num class="cell"></div>
+            <div data-num="1" class="cell"></div>
+            <div data-num="2" class="cell"></div>
+            <div data-num="3" class="cell"></div>
           </div>
           <div>
-            <div data-num class="cell"></div>
-            <div data-num class="cell"></div>
-            <div data-num class="cell"></div>
+            <div data-num="4" class="cell"></div>
+            <div data-num="5" class="cell"></div>
+            <div data-num="6" class="cell"></div>
           </div>
           <div>
-            <div data-num class="cell"></div>
-            <div data-num class="cell"></div>
-            <div data-num class="cell"></div>
+            <div data-num="7" class="cell"></div>
+            <div data-num="8" class="cell"></div>
+            <div data-num="9" class="cell"></div>
           </div>
         </div>
       </div>
