@@ -1,10 +1,18 @@
+//Factory function for player
+const player = (name, index, sign) => {
+  return { name, index, sign };
+};
+
 //Module pattern
 const gameBoard = (() => {
+  const cells = document.querySelectorAll("[data-num]");
+
   const board = [];
+  for (let i = 0; i < 9; i++) {
+    board.push("");
+  }
 
   function displayX() {
-    const cells = document.querySelectorAll("[data-num]");
-
     cells.forEach((cell) => {
       cell.addEventListener("click", (e) => {
         cell.textContent = "X";
@@ -12,5 +20,4 @@ const gameBoard = (() => {
     });
   }
   displayX();
-  console.log(board);
 })();
