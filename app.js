@@ -1,60 +1,33 @@
 //Factory function for player
+
 const player = (name, sign) => {
   return { name, sign };
 };
 
+const player1 = player(1, "X");
+const player2 = player(2, "O");
 //Module pattern
 const gameBoard = (() => {
   const cells = document.querySelectorAll("[data-num]");
-
   const board = [];
-  for (let i = 0; i < 9; i++) {
+  let player1Turn = true;
+
+  for (const cell of cells) {
+    cell.addEventListener("click", () => handleClick(cell));
     board.push("");
   }
 
-  function PlayerChoice(cells, player) {
-    this.cells = cells;
-    this.player = player;
-  }
+  // Sets each cell to true if clicked turn false
 
-  let newChoice = new PlayerChoice("X");
-  board.push(newChoice);
+  function handleClick(cell) {
+    console.log(cell.dataset.num);
+    player1Turn
+      ? (cell.textContent = player1.sign)
+      : (cell.textContent = player2.sign);
+
+    return (player1Turn = !player1Turn);
+  }
   console.log(board);
-
-  function displayX() {
-    cells.forEach((cell) => {
-      cell.addEventListener("click", (e) => {
-        cell.textContent = "X";
-      });
-    });
-  }
-  displayX();
 })();
 
-// Modal
-
-// Get the modal
-const modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-const btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-const span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = "block";
-};
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function () {
-  modal.style.display = "none";
-};
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+// const startGame = (player1, player2) => {};
