@@ -15,12 +15,12 @@ const gameBoard = (() => {
   reset();
 
   function handleClick(cell) {
-    console.log(cell.dataset.num);
     player1Turn
       ? (cell.textContent = player1.sign)
       : (cell.textContent = player2.sign);
 
     player1Turn = !player1Turn;
+    board.push(cell.dataset.num);
   }
 
   function reset() {
@@ -33,4 +33,4 @@ const gameBoard = (() => {
   }
 })();
 
-// const startGame = (player1, player2) => {};
+//  const startGame = (player1, player2) => {};
