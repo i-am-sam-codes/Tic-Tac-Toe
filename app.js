@@ -15,22 +15,35 @@ const gameBoard = (() => {
   reset();
 
   function handleClick(cell) {
+    console.log(cell.dataset.num);
     player1Turn
       ? (cell.textContent = player1.sign)
       : (cell.textContent = player2.sign);
 
     player1Turn = !player1Turn;
     board.push(cell.dataset.num);
+
+    console.log(board);
+
+    let xWinCondition = board.filter((e, i) => {
+      return i % 2 === 0;
+    });
+    console.log(xWinCondition);
+
+    let oWinCondition = board.filter((e, i) => {
+      return i % 2 !== 0;
+    });
+    console.log(oWinCondition);
   }
 
   function reset() {
     for (const cell of cells) {
       cell.addEventListener("click", () => handleClick(cell), { once: true });
       cell.textContent = "";
-
-      board.push();
     }
   }
 })();
 
-//  const startGame = (player1, player2) => {};
+// const startGame = (player1, player2) => {
+//   const winArray = [];
+// };
