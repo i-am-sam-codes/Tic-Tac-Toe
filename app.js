@@ -48,7 +48,7 @@ const gameBoard = (() => {
 const startGame = (() => {
   // const winArray = [];
 
-  const checkWinner = () => {
+  function checkWinner() {
     let xWinCondition = gameBoard.board.filter((e, i) => {
       return i % 2 === 0;
     });
@@ -64,7 +64,7 @@ const startGame = (() => {
         ("7", "5", "3")
       ],
     ];
-  };
+  }
 
-  return { checkWinner };
+  return { checkWinner: checkWinner };
 })();
