@@ -25,16 +25,17 @@ const gameBoard = (() => {
 
     console.log(board);
 
-    let xWinCondition = board.filter((e, i) => {
-      return i % 2 === 0;
-    });
-    console.log(xWinCondition);
+    // let xWinCondition = board.filter((e, i) => {
+    //   return i % 2 === 0;
+    // });
+    // console.log(xWinCondition);
 
-    let oWinCondition = board.filter((e, i) => {
-      return i % 2 !== 0;
-    });
-    console.log(oWinCondition);
+    // let oWinCondition = board.filter((e, i) => {
+    //   return i % 2 !== 0;
+    // });
+    // console.log(oWinCondition);
   }
+  startGame.checkWinner();
 
   function reset() {
     for (const cell of cells) {
@@ -44,6 +45,26 @@ const gameBoard = (() => {
   }
 })();
 
-// const startGame = (player1, player2) => {
-//   const winArray = [];
-// };
+const startGame = (() => {
+  // const winArray = [];
+
+  const checkWinner = () => {
+    let xWinCondition = gameBoard.board.filter((e, i) => {
+      return i % 2 === 0;
+    });
+    console.log(xWinCondition);
+
+    let oWinCondition = gameBoard.board.filter((e, i) => {
+      return i % 2 !== 0;
+    });
+    console.log(oWinCondition);
+
+    let winCondition = [
+      ["1", "2", "3"][("4", "5", "6")][("7", "8", "9")][("1", "5", "9")][
+        ("7", "5", "3")
+      ],
+    ];
+  };
+
+  return { checkWinner };
+})();
