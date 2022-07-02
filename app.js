@@ -38,7 +38,7 @@ const gameBoard = (() => {
     }
   }
 
-  return { cells: cells };
+  return { cells };
 })();
 
 const startGame = (() => {
@@ -58,5 +58,5 @@ const startGame = (() => {
     });
   }
 
-  return { checkWinner: checkWinner };
+  return { checkWinner };
 })();
